@@ -1,5 +1,5 @@
 #ifndef READ_HPP
-#define READ_HPP,,,,
+#define READ_HPP
 
 #include <util.hpp>
 

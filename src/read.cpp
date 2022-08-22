@@ -4,23 +4,24 @@ Read::Read() {}
 Read::~Read() {}
 
 /**
- * @brief realiza a leitura de um arquivo e salva em um mapeamento com vetores
+ * @brief realiza a leitura de um arquivo e faz a sua impressao
  *
  * @param file nome do arquivo a ser aberto
+ *
  */
+void Read::readFile(string path) {
+	path.insert(0, "files/");
 
-void Read::readFile(string file) {
-	file.insert(0, "files/").append(".csv");
-
-	ifstream myfile(file); //abrir arquivo
+	ifstream myfile("files/matriz.txt");
 	string line;
 
 	Util u;
 
 	if (myfile.is_open()) {
-		while (getline(myfile, line)){
-
+		while (getline(myfile, line)) {
+			u.tokenizar(line);
+			// cout << line << endl;
 		}
-			// u.tokenizar(line, valores, ++contLinha);
-	} else cout << "nao foi possivel abrir o arquivo" << endl;
+		myfile.close();
+	} else cout << "Nao foi possivel abrir o arquivo" << endl;
 }

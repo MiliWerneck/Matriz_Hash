@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug 22 15:39:16 2022
+# Make data base, printed on Mon Aug 22 15:52:49 2022
 
 # Variables
 
@@ -230,6 +230,7 @@ PAPERSIZE = a4
 <F = $(notdir $<)
 # default
 SUFFIXES := 
+ 
 # environment
 VSCODE_CLI = 1
 # environment
@@ -253,12 +254,12 @@ LC_IDENTIFICATION = pt_BR.UTF-8
 
 # Directories
 
-# include (device 66307, inode 13647923): 4 files, no impossibilities so far.
+# include (device 66307, inode 13647923): 3 files, no impossibilities so far.
 # src (device 66307, inode 13647931): 2 files, no impossibilities so far.
 # . (device 66307, inode 13506040): 13 files, no impossibilities.
 # apps (device 66307, inode 13506068): No files, no impossibilities so far.
 
-# 19 files, no impossibilities in 4 directories.
+# 18 files, no impossibilities in 4 directories.
 
 # Implicit Rules
 
@@ -274,16 +275,8 @@ bin/%: apps/%.cpp
 # Files
 
 # Not a target:
-include/util.hpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-18 21:09:35.479828
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
 src/read.cpp:
 #  Implicit rule search has been done.
- 
 #  Last modified 2022-08-18 21:06:15.145148
 #  File has been updated.
 #  Successfully updated.
@@ -297,42 +290,18 @@ include/read.hpp:
 
 libed: obj/read.o obj/util.o
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
-# automatic
-# @ := libed
-# automatic
-# * := 
-# automatic
-# < := obj/read.o
-# automatic
-# + := obj/read.o obj/util.o
-# automatic
-# % := 
-# automatic
-# ^ := obj/read.o obj/util.o
-# automatic
-# ? := obj/read.o obj/util.o
-# automatic
-# | := 
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/13=8%
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 #  recipe to execute (from 'Makefile', line 16):
 	ar -rcs $(LIB)/libed.a $(OBJ)/*.o
 
 # Not a target:
-src/util.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-18 20:59:53.313108
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-22 15:11:30.921827
+#  Last modified 2022-08-22 15:50:57.094680945
 #  File has been updated.
 #  Successfully updated.
 
@@ -349,14 +318,11 @@ bin/main:
 #  Modification time never checked.
 #  File has not been updated.
 
-obj/util.o: src/util.cpp include/util.hpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'util'
-#  Last modified 2022-08-22 15:20:20.284316
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 22):
-	g++ $(FLAGS) -c $< -I $(INCLUDE) -o $@
+# Not a target:
+obj/util.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -395,9 +361,27 @@ r: all run
 obj/read.o: src/read.cpp include/read.hpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'read'
-#  Last modified 2022-08-22 15:20:20.040309
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/read.o
+# automatic
+# * := read
+# automatic
+# < := src/read.cpp
+# automatic
+# + := src/read.cpp include/read.hpp
+# automatic
+# % := 
+# automatic
+# ^ := src/read.cpp include/read.hpp
+# automatic
+# ? := src/read.cpp include/read.hpp
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
 #  recipe to execute (from 'Makefile', line 22):
 	g++ $(FLAGS) -c $< -I $(INCLUDE) -o $@
 
@@ -406,26 +390,20 @@ myapps: clean_apps bin/main
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-.SUFFIXES:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 # files hash-table stats:
-# Load=17/1024=2%, Rehash=0, Collisions=0/50=0%
+# Load=15/1024=1%, Rehash=0, Collisions=0/42=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 42 / storage = 349 B / avg = 8 B
-# current buf: size = 8162 B / used = 349 B / count = 42 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 38 / storage = 305 B / avg = 8 B
+# current buf: size = 8162 B / used = 305 B / count = 38 / avg = 8 B
 
-# strcache performance: lookups = 69 / hit rate = 39%
+# strcache performance: lookups = 62 / hit rate = 38%
 # hash-table stats:
-# Load=42/8192=1%, Rehash=0, Collisions=0/69=0%
-# Finished Make data base on Mon Aug 22 15:39:16 2022
+# Load=38/8192=0%, Rehash=0, Collisions=0/62=0%
+# Finished Make data base on Mon Aug 22 15:52:49 2022
 
  

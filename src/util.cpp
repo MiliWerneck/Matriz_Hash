@@ -15,6 +15,7 @@ void Util::tokenizar(string text) {
 	string token;
 
 	while (getline(sstream, token, del)) {
-		cout <<token <<endl;
+		cout << token << " ";
 	}
+	cout << endl;
 }

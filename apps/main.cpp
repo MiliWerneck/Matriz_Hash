@@ -2,7 +2,8 @@
 
 int main() {
 
-	cout << "Hello World" << endl;
+	Read r;
+	r.readFile("");
 
 	return EXIT_SUCCESS;
 }
