@@ -6,18 +6,16 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug 22 15:52:49 2022
+# Make data base, printed on Wed Aug 24 14:43:48 2022
 
 # Variables
 
-# makefile (from 'Makefile', line 5)
-OBJ = ./obj
 # environment
 GDK_BACKEND = x11
 # environment
 LC_ALL = C
-# makefile (from 'Makefile', line 6)
-SRC = ./src
+# makefile (from 'Makefile', line 9)
+SRC := src/main.cpp
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
@@ -32,8 +30,6 @@ LC_NUMERIC = pt_BR.UTF-8
 VSCODE_CWD = /home/mili/Documents/CEFET 2022_II/AED II/Matriz_Hash
 # environment
 WINDOWPATH = 2
-# makefile (from 'Makefile', line 9)
-LIBS = -lm -led -L $(LIB)
 # environment
 LC_ADDRESS = pt_BR.UTF-8
 # default
@@ -42,6 +38,8 @@ MAKE_COMMAND := make
 QT_ACCESSIBILITY = 1
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
+# makefile (from 'Makefile', line 5)
+OBJ_DIR := ./build/objects
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -52,8 +50,6 @@ PWD = /home/mili/Documents/CEFET 2022_II/AED II/Matriz_Hash
 %D = $(patsubst %/,%,$(dir $%))
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
-# environment
-OLDPWD = /home/mili/Documents/CEFET 2022_II/AED II
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
@@ -69,11 +65,11 @@ XAUTHORITY = /run/user/1000/gdm/Xauthority
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # environment
-GNOME_TERMINAL_SERVICE = :1.335
+GNOME_TERMINAL_SERVICE = :1.629
 # makefile
 MAKEFLAGS = pqrR
 # environment
-DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=8a8914cd52fddf6254c739576303b19f
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=0a8234004fe718c136b4c43563062e47
 # makefile
 CURDIR := /home/mili/Documents/CEFET 2022_II/AED II/Matriz_Hash
 # environment
@@ -96,18 +92,14 @@ XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 XDG_SESSION_DESKTOP = ubuntu
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST := Makefile
-# makefile (from 'Makefile', line 1)
-APPS = ./apps
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 18006
+VSCODE_PID = 30343
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# makefile (from 'Makefile', line 8)
-FLAGS = -O3 -Wall
 # environment
 SESSION_MANAGER = local/MiliWerneck:@/tmp/.ICE-unix/2353,unix/MiliWerneck:/tmp/.ICE-unix/2353
 # automatic
@@ -115,15 +107,13 @@ SESSION_MANAGER = local/MiliWerneck:@/tmp/.ICE-unix/2353,unix/MiliWerneck:/tmp/.
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=8a8914cd52fddf6254c739576303b19f
-# makefile (from 'Makefile', line 4)
-LIB = ./lib
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=0a8234004fe718c136b4c43563062e47
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
-# makefile (from 'Makefile', line 3)
-INCLUDE = ./include
+# makefile (from 'Makefile', line 8)
+INCLUDE := -Iinclude/
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -137,7 +127,7 @@ XMODIFIERS = @im=ibus
 # environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/685ae256_a257_45f5_9555_257bd8a0c309
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/c321e57b_83a8_43d3_81ab_f1e082140138
 # environment
 MAKELEVEL := 0
 # default
@@ -172,6 +162,8 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 DESKTOP_SESSION = ubuntu
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# makefile (from 'Makefile', line 11)
+OBJECTS := ./build/objects/src/main.o
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -190,6 +182,12 @@ GTK_MODULES = gail:atk-bridge
 DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
 # default
 MAKE_VERSION := 4.3
+# makefile (from 'Makefile', line 4)
+BUILD := ./build
+# makefile (from 'Makefile', line 3)
+LDFLAGS := -lstdc++ -lm
+# makefile (from 'Makefile', line 6)
+APP_DIR := ./build/
 # environment
 DBUS_STARTER_BUS_TYPE = session
 # environment
@@ -198,8 +196,6 @@ LC_MEASUREMENT = pt_BR.UTF-8
 _ = /usr/bin/code
 # environment
 LC_PAPER = pt_BR.UTF-8
-# makefile (from 'Makefile', line 2)
-BIN = ./bin
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -230,7 +226,8 @@ PAPERSIZE = a4
 <F = $(notdir $<)
 # default
 SUFFIXES := 
- 
+# makefile (from 'Makefile', line 7)
+TARGET := app
 # environment
 VSCODE_CLI = 1
 # environment
@@ -239,6 +236,8 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 VTE_VERSION = 6800
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 1)
+CXX := -g++
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -246,7 +245,7 @@ GDMSESSION = ubuntu
 # environment
 LC_IDENTIFICATION = pt_BR.UTF-8
 # variable set hash-table stats:
-# Load=117/1024=11%, Rehash=0, Collisions=18/160=11%
+# Load=117/1024=11%, Rehash=0, Collisions=14/164=9%
 
 # Pattern-specific Variable Values
 
@@ -254,75 +253,55 @@ LC_IDENTIFICATION = pt_BR.UTF-8
 
 # Directories
 
-# include (device 66307, inode 13647923): 3 files, no impossibilities so far.
-# src (device 66307, inode 13647931): 2 files, no impossibilities so far.
-# . (device 66307, inode 13506040): 13 files, no impossibilities.
-# apps (device 66307, inode 13506068): No files, no impossibilities so far.
+# src (device 66307, inode 919216): 6 files, no impossibilities.
+# . (device 66307, inode 13506040): 8 files, no impossibilities.
 
-# 18 files, no impossibilities in 4 directories.
+# 14 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
-obj/%.o: src/%.cpp include/%.hpp
-#  recipe to execute (from 'Makefile', line 22):
-	g++ $(FLAGS) -c $< -I $(INCLUDE) -o $@
+build/objects/%.o: %.cpp
+#  recipe to execute (from 'Makefile', line 16):
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ -c $<
 
-bin/%: apps/%.cpp
-#  recipe to execute (from 'Makefile', line 25):
-	g++ $(FLAGS) $< $(LIBS) -I $(INCLUDE) -o $@
-
-# 2 implicit rules, 0 (0.0%) terminal.
+# 1 implicit rules, 0 (0.0%) terminal.
 # Files
 
-# Not a target:
-src/read.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-18 21:06:15.145148
-#  File has been updated.
-#  Successfully updated.
+build//app: build/objects/src/main.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 20):
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $(APP_DIR)/$(TARGET) $(OBJECTS) $(LDFLAGS)
 
-# Not a target:
-include/read.hpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-08-22 15:15:06.571291
-#  File has been updated.
-#  Successfully updated.
-
-libed: obj/read.o obj/util.o
+# makefile (from 'Makefile', line 29)
+ 
+debug: CXXFLAGS += -DDEBUG -g
+debug: all
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
+#  File has not been updated.
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
-#  recipe to execute (from 'Makefile', line 16):
-	ar -rcs $(LIB)/libed.a $(OBJ)/*.o
+# Load=1/32=3%, Rehash=0, Collisions=0/3=0%
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-22 15:50:57.094680945
+#  Last modified 2022-08-24 14:29:03.133492
 #  File has been updated.
 #  Successfully updated.
 
 clean:
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 31):
-	rm -rf $(BIN)/* $(LIB)/* $(OBJ)/*
-
-# Not a target:
-bin/main:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-obj/util.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 36):
+	-@rm -rvf $(OBJ_DIR)/*
+	-@rm -rvf $(APP_DIR)/*
 
 # Not a target:
 .DEFAULT:
@@ -330,9 +309,16 @@ obj/util.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-all: libed myapps
+# Not a target:
+build/objects/src/main.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: build build//app
+#  Phony target (prerequisite of .PHONY).
 #  Command line target.
-#  Implicit rule search has been done.
+#  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
@@ -340,70 +326,82 @@ all: libed myapps
 # Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 
 run:
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 28):
-	$(BIN)/main
+#  recipe to execute (from 'Makefile', line 40):
+	./$(BUILD)/$(TARGET)
 
-clean_apps:
+build:
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 34):
-	rm -rf $(BIN)/*
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := build
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=2/13=15%
+#  recipe to execute (from 'Makefile', line 26):
+	@mkdir -p $(APP_DIR)
+	@mkdir -p $(OBJ_DIR)
 
 r: all run
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-obj/read.o: src/read.cpp include/read.hpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'read'
+# makefile (from 'Makefile', line 32)
+release: CXXFLAGS += -O3
+release: all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
 #  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := obj/read.o
-# automatic
-# * := read
-# automatic
-# < := src/read.cpp
-# automatic
-# + := src/read.cpp include/read.hpp
-# automatic
-# % := 
-# automatic
-# ^ := src/read.cpp include/read.hpp
-# automatic
-# ? := src/read.cpp include/read.hpp
-# automatic
-# | := 
+#  File has not been updated.
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
-#  recipe to execute (from 'Makefile', line 22):
-	g++ $(FLAGS) -c $< -I $(INCLUDE) -o $@
+# Load=1/32=3%, Rehash=0, Collisions=0/3=0%
 
-myapps: clean_apps bin/main
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: all build clean debug release run
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=15/1024=1%, Rehash=0, Collisions=0/42=0%
+# Load=13/1024=1%, Rehash=0, Collisions=0/46=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 38 / storage = 305 B / avg = 8 B
-# current buf: size = 8162 B / used = 305 B / count = 38 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 27 / storage = 228 B / avg = 8 B
+# current buf: size = 8162 B / used = 228 B / count = 27 / avg = 8 B
 
-# strcache performance: lookups = 62 / hit rate = 38%
+# strcache performance: lookups = 60 / hit rate = 55%
 # hash-table stats:
-# Load=38/8192=0%, Rehash=0, Collisions=0/62=0%
-# Finished Make data base on Mon Aug 22 15:52:49 2022
+# Load=27/8192=0%, Rehash=0, Collisions=0/60=0%
+# Finished Make data base on Wed Aug 24 14:43:48 2022
 
  

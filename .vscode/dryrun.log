@@ -1,9 +1,10 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/mili/Documents/CEFET 2022_II/AED II/Matriz_Hash'
-g++ -O3 -Wall -c src/read.cpp -I ./include -o obj/read.o
-g++ -O3 -Wall -c src/util.cpp -I ./include -o obj/util.o
-ar -rcs ./lib/libed.a ./obj/*.o
-rm -rf ./bin/*
-g++ -O3 -Wall apps/main.cpp -lm -led -L ./lib -I ./include -o bin/main
+mkdir -p ./build/
+mkdir -p ./build/objects
+mkdir -p build/objects/src
+g++  -Iinclude/ -o build/objects/src/main.o -c src/main.cpp
+mkdir -p build/
+g++  -Iinclude/ -o ./build//app ./build/objects/src/main.o -lstdc++ -lm
 make: Leaving directory '/home/mili/Documents/CEFET 2022_II/AED II/Matriz_Hash'
  
