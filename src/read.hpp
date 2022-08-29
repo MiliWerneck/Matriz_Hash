@@ -29,10 +29,11 @@ void Read::readFile(int **matriz) {
 
 	Util u;
 
+	int contLinha = 0;
+
 	if (myfile.is_open()) {
 		while (getline(myfile, line)) {
-			u.tokenizar(line, matriz);
-			// cout << line << endl;
+			u.tokenizar(line, matriz, contLinha++);
 		}
 		myfile.close();
 	} else cout << "Nao foi possivel abrir o arquivo" << endl;
