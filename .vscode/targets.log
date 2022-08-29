@@ -5,8 +5,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Mon Aug 29 13:34:25 2022
+# Make data base, printed on Mon Aug 29 14:16:08 2022
 
 # Variables
 
@@ -14,16 +15,12 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 GDK_BACKEND = x11
 # environment
 LC_ALL = C
-# environment
-NO_AT_BRIDGE = 1
-# environment
-GNOME_SHELL_SESSION_MODE = ubuntu
 # makefile (from 'Makefile', line 9)
 SRC := src/main.cpp
 # environment
-SSH_AGENT_LAUNCHER = gnome-keyring
+GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-GJS_DEBUG_OUTPUT = stderr
+SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
 # environment
@@ -31,7 +28,7 @@ LC_NAME = pt_BR.UTF-8
 # environment
 LC_NUMERIC = pt_BR.UTF-8
 # environment
-VSCODE_CWD = /home/mili/Documents/CEFET 2022_II/AED II/teste/Matriz_Hash
+VSCODE_CWD = /home/mili/Documents/CEFET 2022_II/AED II/Matriz_Hash
 # environment
 WINDOWPATH = 2
 # environment
@@ -49,7 +46,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/mili/Documents/CEFET 2022_II/AED II/teste/Matriz_Hash
+PWD = /home/mili/Documents/CEFET 2022_II/AED II/Matriz_Hash
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -75,7 +72,7 @@ MAKEFLAGS = pqrR
 # environment
 DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=7f4da3492f60225256bf444d630ce7b1
 # makefile
-CURDIR := /home/mili/Documents/CEFET 2022_II/AED II/teste/Matriz_Hash
+CURDIR := /home/mili/Documents/CEFET 2022_II/AED II/Matriz_Hash
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
@@ -99,7 +96,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 3852
+VSCODE_PID = 7742
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -129,11 +126,9 @@ MAKECMDGOALS := all
 # environment
 XMODIFIERS = @im=ibus
 # environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
-# environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/7d26f119_b85c_4d5d_8c03_89441cb87838
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/8c8ab01c_00e5_46c1_9041_7865a29984ee
 # environment
 MAKELEVEL := 0
 # default
@@ -150,8 +145,6 @@ LC_MONETARY = pt_BR.UTF-8
 ^F = $(notdir $^)
 # environment
 LC_TIME = pt_BR.UTF-8
-# environment
-INVOCATION_ID = e9696d1e5bd7485ba20d5a4a3dcf4e81
 # environment
 USERNAME = mili
 # environment
@@ -176,8 +169,6 @@ OBJECTS := ./build/objects/src/main.o
 GNUMAKEFLAGS := 
 # environment
 LOGNAME = mili
-# environment
-GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := all
 # environment
@@ -196,16 +187,12 @@ MAKE_VERSION := 4.3
 BUILD := ./build
 # makefile (from 'Makefile', line 3)
 LDFLAGS := -lstdc++ -lm
-# environment
-MANAGERPID = 1911
 # makefile (from 'Makefile', line 6)
 APP_DIR := ./build/
 # environment
 DBUS_STARTER_BUS_TYPE = session
 # environment
 LC_MEASUREMENT = pt_BR.UTF-8
-# environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 3852
 # environment
 _ = /usr/bin/code
 # environment
@@ -218,8 +205,6 @@ GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 COLORTERM = truecolor
 # environment
 LC_CTYPE = pt_BR.UTF-8
-# environment
-JOURNAL_STREAM = 8:31529
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -261,7 +246,7 @@ GDMSESSION = ubuntu
 # environment
 LC_IDENTIFICATION = pt_BR.UTF-8
 # variable set hash-table stats:
-# Load=125/1024=12%, Rehash=0, Collisions=18/172=10%
+# Load=117/1024=11%, Rehash=0, Collisions=14/164=9%
 
 # Pattern-specific Variable Values
 
@@ -285,11 +270,11 @@ build/objects/%.o: %.cpp
 # Files
 
 build//app: build/objects/src/main.o
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 20):
- 
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $(APP_DIR)/$(TARGET) $(OBJECTS) $(LDFLAGS)
 
@@ -306,7 +291,7 @@ debug: all
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-29 13:32:55.004921796
+#  Last modified 2022-08-29 14:16:07.144096881
 #  File has been updated.
 #  Successfully updated.
 
@@ -378,7 +363,7 @@ build:
 	@mkdir -p $(APP_DIR)
 	@mkdir -p $(OBJ_DIR)
 
-r: all run
+r: clean all run
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -405,7 +390,7 @@ release: all
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=13/1024=1%, Rehash=0, Collisions=0/46=0%
+# Load=13/1024=1%, Rehash=0, Collisions=0/47=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
@@ -415,9 +400,9 @@ release: all
 # strcache buffers: 1 (0) / strings = 27 / storage = 228 B / avg = 8 B
 # current buf: size = 8162 B / used = 228 B / count = 27 / avg = 8 B
 
-# strcache performance: lookups = 60 / hit rate = 55%
+# strcache performance: lookups = 61 / hit rate = 55%
 # hash-table stats:
-# Load=27/8192=0%, Rehash=0, Collisions=0/60=0%
-# Finished Make data base on Mon Aug 29 13:34:25 2022
+# Load=27/8192=0%, Rehash=0, Collisions=0/61=0%
+# Finished Make data base on Mon Aug 29 14:16:08 2022
 
  

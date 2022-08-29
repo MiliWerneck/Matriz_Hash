@@ -39,4 +39,4 @@ clean:
 run:
 	./$(BUILD)/$(TARGET)
 
-r: all run
+r: clean all run

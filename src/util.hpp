@@ -16,6 +16,7 @@ public:
 	void tokenizar(string text, int **matriz, int linha);
 	void quadranteMatriz(int **matriz, int **quadrante, int l1, int c1, int l2, int c2);
 	void transposta(int **matriz, int **matrizT, int linha, int coluna);
+	void multiplicaMatriz(int **matriz, int **matrizT, int **matrizResultado, int l1, int c1, int l2, int c2);
 	void imprimeMatriz(int **matriz, int linha, int coluna);
 };
 
@@ -32,11 +33,9 @@ void Util::tokenizar(string text, int **matriz, int linha) {
 	int coluna = 0;
 	stringstream sstream(text);
 	string token;
-
 	while (getline(sstream, token, del)) {
 		matriz[linha][coluna++] = stoi(token);
 	}
-	// cout << endl;
 }
 
 void Util::quadranteMatriz(int **matriz, int **quadrante, int l1, int c1, int l2, int c2) {
@@ -61,6 +60,25 @@ void Util::transposta(int **matriz, int **matrizT, int linha, int coluna) {
 	}
 
 }
+
+void Util::multiplicaMatriz(int **matriz, int **matrizT, int **matrizResultado, int l1, int c1, int l2, int c2) {
+	int soma;
+	int contador = 0;
+
+	for (int i = 0; i < l1; i++) {
+		for (int j = 0; j < c2;j++) {
+			soma = 0;
+
+			for (int k = 0;k < c1; k++) {
+				soma += matriz[i][k] * matrizT[k][j];
+				contador++;
+			}
+			matrizResultado[i][j] = soma;
+		}
+	}
+	cout << contador << endl;
+}
+
 
 void Util::imprimeMatriz(int **matriz, int linha, int coluna) {
 	for (int i = 0; i < linha; i++) {
