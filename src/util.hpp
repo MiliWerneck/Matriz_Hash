@@ -7,6 +7,14 @@
 
 using namespace std;
 
+typedef struct dimen dimen;
+struct dimen {
+	int l1;
+	int l2;
+	int c1;
+	int c2;
+};
+
 class Util {
 private:
 public:
@@ -14,7 +22,7 @@ public:
 	~Util();
 
 	void tokenizar(string text, int **matriz, int linha);
-	void quadranteMatriz(int **matriz, int **quadrante, int l1, int c1, int l2, int c2);
+	void quadranteMatriz(int **matriz, int **quadrante, dimen *d);
 	void transposta(int **matriz, int **matrizT, int linha, int coluna);
 	void multiplicaMatriz(int **matriz, int **matrizT, int **matrizResultado, int l1, int c1, int l2, int c2);
 	void imprimeMatriz(int **matriz, int linha, int coluna);
@@ -38,20 +46,6 @@ void Util::tokenizar(string text, int **matriz, int linha) {
 	}
 }
 
-void Util::quadranteMatriz(int **matriz, int **quadrante, int l1, int c1, int l2, int c2) {
-	int x = 0;
-	int y = 0;
-
-	for (int i = l1; i < l2; i++) {
-		y = 0;
-		for (int j = c1;j < c2; j++) {
-			quadrante[x][y] = matriz[i][j];
-			y++;
-		}
-		x++;
-	}
-}
-
 void Util::transposta(int **matriz, int **matrizT, int linha, int coluna) {
 	for (int i = 0; i < linha; i++) {
 		for (int j = 0;j < coluna; j++) {
@@ -59,6 +53,20 @@ void Util::transposta(int **matriz, int **matrizT, int linha, int coluna) {
 		}
 	}
 
+}
+
+void Util::quadranteMatriz(int **matriz, int **quadrante, dimen *d) {
+	int x = 0;
+	int y = 0;
+
+	for (int i = d->l1; i < d->l2; i++) {
+		y = 0;
+		for (int j = d->c1;j < d->c2; j++) {
+			quadrante[x][y] = matriz[i][j];
+			y++;
+		}
+		x++;
+	}
 }
 
 void Util::multiplicaMatriz(int **matriz, int **matrizT, int **matrizResultado, int l1, int c1, int l2, int c2) {
@@ -78,7 +86,6 @@ void Util::multiplicaMatriz(int **matriz, int **matrizT, int **matrizResultado, 
 	}
 	cout << contador << endl;
 }
-
 
 void Util::imprimeMatriz(int **matriz, int linha, int coluna) {
 	for (int i = 0; i < linha; i++) {
