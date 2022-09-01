@@ -4,6 +4,8 @@
 #include <sstream>
 #include <string>
 #include <iostream>
+#include<vector>
+#include <map>
 
 using namespace std;
 
@@ -17,6 +19,8 @@ struct dimen {
 
 class Util {
 private:
+	map<string, vector<vector<int>>> mapa2;
+	map<string, vector<vector<int>>> ::iterator itr;
 public:
 	Util();
 	~Util();
@@ -24,8 +28,11 @@ public:
 	void tokenizar(string text, int **matriz, int linha);
 	void quadranteMatriz(int **matriz, int **quadrante, dimen *d);
 	void transposta(int **matriz, int **matrizT, int linha, int coluna);
-	void multiplicaMatriz(int **matriz, int **matrizT, int **matrizResultado, int l1, int c1, int l2, int c2);
+	void multiplicaMatriz(int **matriz, int **matrizT, int **matrizResultado, int l1, int c1, int c2);
 	void imprimeMatriz(int **matriz, int linha, int coluna);
+	void imprimeTransfMatriz(vector<vector<int>> m2);
+	void transformaMatriz(int **matriz, int linha, int coluna);
+	void buscarChave(string chave);
 };
 
 Util::Util() {}
@@ -69,9 +76,8 @@ void Util::quadranteMatriz(int **matriz, int **quadrante, dimen *d) {
 	}
 }
 
-void Util::multiplicaMatriz(int **matriz, int **matrizT, int **matrizResultado, int l1, int c1, int l2, int c2) {
+void Util::multiplicaMatriz(int **matriz, int **matrizT, int **matrizResultado, int l1, int c1, int c2) {
 	int soma;
-	int contador = 0;
 
 	for (int i = 0; i < l1; i++) {
 		for (int j = 0; j < c2;j++) {
@@ -79,12 +85,12 @@ void Util::multiplicaMatriz(int **matriz, int **matrizT, int **matrizResultado, 
 
 			for (int k = 0;k < c1; k++) {
 				soma += matriz[i][k] * matrizT[k][j];
-				contador++;
+				// contador++;
 			}
 			matrizResultado[i][j] = soma;
 		}
 	}
-	cout << contador << endl;
+	// cout << contador << endl;
 }
 
 void Util::imprimeMatriz(int **matriz, int linha, int coluna) {
@@ -95,6 +101,34 @@ void Util::imprimeMatriz(int **matriz, int linha, int coluna) {
 		cout << endl;
 	}
 	cout << endl;
+}
+
+void Util::imprimeTransfMatriz(vector<vector<int>> m2) {
+	for (auto linha : m2) { // auto pega o tipo automaticamente
+		for (auto var : linha) {
+			cout << var << "\t";
+		}
+		cout << endl;
+	}
+}
+
+void Util::transformaMatriz(int **matriz, int linha, int coluna) {
+	vector<vector<int>> matrizvetor(linha, vector<int>(coluna, 0));
+	for (int i = 0; i < linha; i++) {
+		for (int j = 0; j < coluna; j++) {
+			matrizvetor.at(i).at(j) = matriz[i][j];
+		}
+	}
+	this->mapa2.insert({ "chave",matrizvetor });
+	// imprimeTransfMatriz(&matrizvetor);
+}
+
+void Util::buscarChave(string chave) {
+	this->itr = this->mapa2.find(chave);
+	if (this->itr != this->mapa2.end()) {
+		imprimeTransfMatriz(this->itr->second);
+	} else
+		cout << "Não encontrada!!!" << endl;
 }
 
 #endif
