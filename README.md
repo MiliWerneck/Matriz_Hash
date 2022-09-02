@@ -21,22 +21,22 @@ Fez-se a leitura a partir das coordenadas (função quadranteMatriz), produziu-s
 
 ### Menu Inicial
 <p align="left">
-  <img src="src/images/menu.png"></img>
+  <img src="src/images/menu.png" height = "150"></img>
 </p>
 
 ### Menu apresentando não encontro de colisões
 <p align="left">
-  <img src="src/images/telanaoencontrada.png"></img>
+  <img src="src/images/telanaoencontrada.png" height = "300"></img>
 </p>
 
 ### Menu apresentando encontro de colisões e perguntando se quer imprimir a matriz
 <p align="left">
-  <img src="src/images/telaencontradahash.png"></img>
+  <img src="src/images/telaencontradahash.png " height = "300"></img>
 </p>
 
 ### Menu com impressão da matriz com os valores após os processamentos.
 <p align="left">
-  <img src="src/images/matrizfinal.png"></img>
+  <img src="src/images/matrizfinal.png"height = "360"></img>
 </p>
 
 ## Compilação:
