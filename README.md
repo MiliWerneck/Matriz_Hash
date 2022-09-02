@@ -29,7 +29,7 @@ Fez-se a leitura a partir das coordenadas (função quadranteMatriz), produziu-s
   <img src="src/images/telanaoencontrada.png" height = "300"></img>
 </p>
 
-### Menu apresentando encontro de colisões e perguntando se quer imprimir a matriz
+### Menu apresentando encontro de colisões.
 <p align="left">
   <img src="src/images/telaencontradahash.png " height = "300"></img>
 </p>
@@ -39,6 +39,11 @@ Fez-se a leitura a partir das coordenadas (função quadranteMatriz), produziu-s
   <img src="src/images/matrizfinal.png"height = "360"></img>
 </p>
 
+### Menu informando que dados não podem ser processados.
+<p align="left">
+  <img src="src/images/erro.png"height = "270"></img>
+</p>
+
 ## Resultados e Conclusão:
 
 <p align="justify">
@@ -46,10 +51,6 @@ Os resultados encontrados mostram que, utilizando HASH, economiza-se muito no pr
 Com isso, consegue-se comprovar que a utilização de HASH melhora, e muito o tempo de processamento de grandes volumes de dados.
 
 
-### Menu informando que dados não podem ser processados.
-<p align="left">
-  <img src="src/images/erro.png"height = "270"></img>
-</p>
 
 
 ### Menu informando que os dados das coordenadas não  foram encontrados na HASH.
