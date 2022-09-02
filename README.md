@@ -26,17 +26,17 @@ Fez-se a leitura a partir das coordenadas (função quadranteMatriz), produziu-s
 
 ### Menu apresentando não encontro de colisões
 <p align="center">
-  <img src="imgs/tela_nao_encontrada.png"></img>
+  <img src="imgs/telanaoencontrada.png"></img>
 </p>
 
 ### Menu apresentando encontro de colisões e perguntando se quer imprimir a matriz
 <p align="center">
-  <img src="imgs/tela_encontrada.png"></img>
+  <img src="imgs/telaencontrada.png"></img>
 </p>
 
 ### Menu com impressão da matriz com os valores após os processamentos.
 <p align="center">
-  <img src="imgs/matriz_final.png"></img>
+  <img src="imgs/matrizfinal.png"></img>
 </p>
 
 ## Compilação:
