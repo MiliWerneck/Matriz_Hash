@@ -15,7 +15,7 @@ Documentação: Readme.md descrevendo o problema e todas as informações pertin
 
 - Descrevendo o problema:
 <p align="justify">
-Implementou-se multiplicação de matrizes, com valores muito grandes (MAX x MAX), para teste usou-se (1000 x 1000) números inteiros, obtidos através do site: https://mxncalc.com/pt/generator. Tokenizou-se a matriz (função tokenizar) para retirar as virgulas, fez-se o processamento a partir de coordenadas fornecidas pelo usuário, dupla de i e j correspondendo a posição inicial e final a ser lida, na l1(linha inicial), c1(coluna inicial), l2(linha final), c2(coluna final).
+Implementou-se multiplicação de matrizes, com valores muito grandes (MAX x MAX), para teste usou-se (1000 x 1000) números inteiros, obtidos através do site: <a src="https://mxncalc.com/pt/generator">Generator</a>. Tokenizou-se a matriz (função tokenizar) para retirar as virgulas, fez-se o processamento a partir de coordenadas fornecidas pelo usuário, dupla de i e j correspondendo a posição inicial e final a ser lida, na l1(linha inicial), c1(coluna inicial), l2(linha final), c2(coluna final).
 <p align="justify">
 Fez-se a leitura a partir das coordenadas (função quadranteMatriz), produziu-se a transposta da matriz (função transposta). Feito isso, executou-se a multiplicação (função multiplicaMatriz) armazenamento em uma HASH o resultado da multiplicação como valor para a dupla de i's e j's (função transformaMatriz), os quais são utilizados como chaves da HASH. Após cada novo cálculo, o sistema consulta a HASH para identificar se a multiplicação já foi realizada (função buscarChave), se sim, retorna resposta (função imprimeTransfMatriz). Caso contrário, multiplica e armazena o conteúdo em cache.
 
@@ -25,17 +25,17 @@ Fez-se a leitura a partir das coordenadas (função quadranteMatriz), produziu-s
 </p>
 
 ### Menu apresentando não encontro de colisões
-<p align="center">
+<p align="left">
   <img src="src/images/telanaoencontrada.png"></img>
 </p>
 
 ### Menu apresentando encontro de colisões e perguntando se quer imprimir a matriz
-<p align="center">
+<p align="left">
   <img src="src/images/telaencontradahash.png"></img>
 </p>
 
 ### Menu com impressão da matriz com os valores após os processamentos.
-<p align="center">
+<p align="left">
   <img src="src/images/matrizfinal.png"></img>
 </p>
 
