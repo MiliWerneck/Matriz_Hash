@@ -1,5 +1,3 @@
-
-
 <!-- map<string, vector<vector<int>>> mapa2;
 	map<string, vector<vector<int>>> ::iterator itr;
 Usado para o armazenamento e a recuperação de dados de uma coleção em que cada elemento é um par que contém um valor de dados e uma chave de classificação. O valor da chave é exclusivo e usado para classificar os dados automaticamente.
@@ -40,6 +38,35 @@ Fez-se a leitura a partir das coordenadas (função quadranteMatriz), produziu-s
 <p align="left">
   <img src="src/images/matrizfinal.png"height = "360"></img>
 </p>
+
+## Resultados e Conclusão:
+
+<p align="justify">
+Os resultados encontrados mostram que, utilizando HASH, economiza-se muito no processamento de dados. Abaixo apresenta-se imagens com tempo cronometrado para processamento da matriz de linha zero, coluna zero, até linha 999, coluna 999, antes de utilizar HASH. Após o tempo de processamento foi imperceptível.
+Com isso, consegue-se comprovar que a utilização de HASH melhora, e muito o tempo de processamento de grandes volumes de dados.
+
+
+### Menu informando que dados não podem ser processados.
+<p align="left">
+  <img src="src/images/erro.png"height = "270"></img>
+</p>
+
+
+### Menu informando que os dados das coordenadas não  foram encontrados na HASH.
+<p align="left">
+  <img src="src/images/0a999naoencontrada.png"height = "290"></img>
+</p>
+
+### Imagem de tempo para processar a matriz de coordenadas (0,0) a (999,999).
+<p align="left">
+  <img src="src/images/tempo.png"height = "270"></img>
+</p>
+
+### Menu informando que os dados foram encontrados na HASH.
+<p align="left">
+  <img src="src/images/0a999Hash.png"height = "290"></img>
+</p>
+
 
 ## Compilação:
 
